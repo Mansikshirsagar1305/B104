@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Outer wrapper (pink background) */
+.container {
+  width: 100%;
+  max-width: 900px;
+  background: #ffa8a8;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Header & Footer */
+header,
+footer {
+  background: #96d1c7;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  padding: 12px;
+}
+
+/* Middle section: aside + article side by side */
+.main {
+  display: flex;
+  gap: 15px;
+}
+
+aside {
+  flex: 1;
+  background: #5bb8b4;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+article {
+  flex: 3;
+  background: #ff7676;
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 15px;
+  min-height: 200px;
+}
+
+article h2 {
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Images row */
+.images {
+  display: flex;
+  gap: 12px;
+}
+
+.image {
+  flex: 1;
+  height: 80px;
+  background: #d3d3d3;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- Mobile layout ---------- */
+@media (max-width: 600px) {
+  .container {
+    max-width: 320px;
+    border-radius: 25px;
+    background: #f9d5dc;
+  }
+
+  header,
+  footer {
+    background: #7fc5bd;
+  }
+
+  /* Aside is hidden on mobile */
+  aside {
+    display: none;
+  }
+
+  article {
+    flex: 1;
+    justify-content: flex-start;
+  }
+
+  /* Images stack vertically */
+  .images {
+    flex-direction: column;
+  }
+
+  .image {
+    height: 110px;
+  }
+}
