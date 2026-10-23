@@ -1,0 +1,153 @@
+
+/* Remove default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    padding: 15px 7%;
+}
+
+/* Main container */
+.container {
+    width: 100%;
+}
+
+/* Page heading */
+h1 {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    color: #111111;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    min-height: 60px;
+    padding: 10px 16px;
+    background-color: #171b1b;
+    color: white;
+    border: 1px solid #444444;
+}
+
+/* Group icon */
+.group-icon {
+    min-width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #3a202a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+/* Group details */
+.group-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.group-info h3 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.group-info p {
+    color: #a8aaaa;
+    font-size: 11px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Add to list button */
+.list-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    background-color: #171b1b;
+    color: white;
+    border: 1px solid #343838;
+    border-radius: 25px;
+    font-size: 12px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+/* Navbar icon buttons */
+.icon-btn {
+    background: transparent;
+    color: #eeeeee;
+    border: none;
+    padding: 8px;
+    font-size: 20px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.icon-btn span {
+    font-size: 10px;
+}
+
+/* Search and menu separators */
+.search,
+.menu {
+    border-left: 1px solid #303535;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        padding: 15px 3%;
+    }
+
+    .navbar {
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .group-info p {
+        max-width: 180px;
+    }
+
+    .list-btn {
+        padding: 8px;
+        gap: 5px;
+    }
+
+    .icon-btn {
+        padding: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 22px;
+    }
+
+    .group-info p {
+        display: none;
+    }
+
+    .list-btn {
+        font-size: 10px;
+    }
+
+    .icon-btn {
+        font-size: 16px;
+    }
+}

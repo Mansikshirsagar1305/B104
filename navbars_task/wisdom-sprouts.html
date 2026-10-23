@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wisdom Sprouts Navbar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #d3e6e2;
+      --teal: #1f6f6b;
+      --orange: #ff6a1a;
+      --text: #222;
+    }
+
+    body {
+      font-family: "Poppins", Arial, sans-serif;
+      background: #fff;
+    }
+
+    /* ---------- Navbar ---------- */
+    .navbar {
+      background: var(--bg);
+      background-image:
+        radial-gradient(circle at 20% 120%, rgba(255,255,255,0.45) 0, transparent 40%),
+        radial-gradient(circle at 70% -30%, rgba(255,255,255,0.45) 0, transparent 40%);
+      width: 100%;
+    }
+
+    .nav-inner {
+      max-width: 1250px;
+      margin: 0 auto;
+      height: 70px;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* Logo */
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+    }
+    .logo-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: #b9d4cf;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+    .logo-text { line-height: 1; }
+    .logo-text strong {
+      display: block;
+      background: var(--teal);
+      color: #d3e6e2;
+      font-size: 13px;
+      letter-spacing: 2px;
+      padding: 3px 6px;
+      font-weight: 700;
+    }
+    .logo-text small {
+      display: block;
+      margin-top: 3px;
+      font-size: 8px;
+      font-weight: 600;
+      color: var(--teal);
+      text-align: center;
+    }
+
+    /* Links */
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 28px;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 400;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--orange); }
+
+    /* Button */
+    .contact-btn {
+      background: var(--orange);
+      color: #fff;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 9px 22px;
+      border-radius: 30px;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .contact-btn:hover {
+      background: #e85a0c;
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+
+      <a href="#" class="logo">
+        <div class="logo-icon">🌱</div>
+        <div class="logo-text">
+          <strong>WISDOM SPROUTS</strong>
+          <small>IT Training Hub</small>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Blogs</a></li>
+        <li><a href="#">Placements</a></li>
+        <li><a href="#">Internship</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Hire From Us</a></li>
+      </ul>
+
+      <a href="#" class="contact-btn">Contact Us</a>
+
+    </div>
+  </nav>
+
+</body>
+</html>
