@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="register2.css">
+</head>
+<body>
+
+    <div class="register-card">
+
+        <h1>Registration</h1>
+
+        <div class="account-type">
+            <label>
+                <input type="radio" name="account" value="personal" checked>
+                Personal
+            </label>
+
+            <label>
+                <input type="radio" name="account" value="company">
+                Company
+            </label>
+        </div>
+
+        <form action="#" method="post">
+
+            <div class="input-group">
+                <span class="icon">✉</span>
+                <input type="email" placeholder="Email" required>
+            </div>
+
+            <div class="input-group">
+                <span class="icon">♟</span>
+                <input type="text" placeholder="Name" required>
+            </div>
+
+            <div class="input-group">
+                <span class="icon">⛨</span>
+                <input type="password" placeholder="Password" required>
+            </div>
+
+            <div class="gender-options">
+                <label>
+                    <input type="radio" name="gender" value="male" checked>
+                    Male
+                </label>
+
+                <label>
+                    <input type="radio" name="gender" value="female">
+                    Female
+                </label>
+            </div>
+
+            <div class="form-footer">
+                <p>
+                    By clicking Register, you agree to our
+                    <a href="#">terms and condition</a>.
+                </p>
+
+                <button type="submit">Register</button>
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
