@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Career Portal</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+}
+
+header {
+    background: #283747;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+.banner {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.jobs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 25px;
+}
+
+.job-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px #ccc;
+}
+
+.job-card h2 {
+    color: #2874a6;
+}
+
+.apply {
+    max-width: 550px;
+    background: white;
+    padding: 30px;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 7px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background: #2874a6;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #154360;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Career Portal</h1>
+    <p>Find Your Dream Job</p>
+</header>
+
+<img
+    class="banner"
+    src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=80"
+    alt="Professional Team">
+
+<section class="jobs">
+
+    <div class="job-card">
+        <h2>Java Developer</h2>
+        <p><strong>Company:</strong> ABC Technologies</p>
+        <p><strong>Location:</strong> Pune</p>
+        <p><strong>Experience:</strong> Fresher</p>
+        <p><strong>Skills:</strong> Java, OOP, SQL, Spring Boot</p>
+        <p><strong>Description:</strong> Develop Java-based applications.</p>
+    </div>
+
+    <div class="job-card">
+        <h2>Web Developer</h2>
+        <p><strong>Company:</strong> XYZ Solutions</p>
+        <p><strong>Location:</strong> Mumbai</p>
+        <p><strong>Experience:</strong> Fresher</p>
+        <p><strong>Skills:</strong> HTML, CSS, JavaScript</p>
+        <p><strong>Description:</strong> Design and develop websites.</p>
+    </div>
+
+    <div class="job-card">
+        <h2>PHP Developer</h2>
+        <p><strong>Company:</strong> Smart Scripts</p>
+        <p><strong>Location:</strong> Remote</p>
+        <p><strong>Experience:</strong> Fresher</p>
+        <p><strong>Skills:</strong> PHP, MySQL, HTML, CSS</p>
+        <p><strong>Description:</strong> Develop dynamic web applications.</p>
+    </div>
+
+</section>
+
+<div class="apply">
+
+    <h1>Job Application Form</h1>
+
+    <form action="#" method="post" enctype="multipart/form-data">
+
+        <label>Full Name</label>
+        <input type="text" name="name" required>
+
+        <label>Email</label>
+        <input type="email" name="email" required>
+
+        <label>Phone Number</label>
+        <input type="tel" name="phone" pattern="[0-9]{10}" required>
+
+        <label>Select Job Role</label>
+        <select name="job_role" required>
+            <option value="">Choose Job</option>
+            <option>Java Developer</option>
+            <option>Web Developer</option>
+            <option>PHP Developer</option>
+        </select>
+
+        <label>Qualification</label>
+        <input type="text" name="qualification" required>
+
+        <label>Skills</label>
+        <textarea name="skills"
+                  placeholder="Enter your skills"
+                  required></textarea>
+
+        <label>Upload Resume (PDF)</label>
+        <input type="file" name="resume"
+               accept=".pdf" required>
+
+        <button type="submit">Apply Now</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
