@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hospital Appointment</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #e8f8f5;
+    padding: 20px;
+}
+
+.container {
+    max-width: 550px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px #ccc;
+}
+
+.banner {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: #117864;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 7px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 90px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background: #117864;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0b5345;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <img
+        src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=800&q=80"
+        alt="Hospital"
+        class="banner">
+
+    <h1>Hospital Appointment</h1>
+
+    <form action="#" method="post">
+
+        <label>Patient Name</label>
+        <input type="text" name="patient_name" required>
+
+        <label>Age</label>
+        <input type="number" name="age" min="1" max="120" required>
+
+        <label>Gender</label>
+        <select name="gender" required>
+            <option value="">Select Gender</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+        </select>
+
+        <label>Contact Number</label>
+        <input type="tel" name="phone" pattern="[0-9]{10}" required>
+
+        <label>Email</label>
+        <input type="email" name="email" required>
+
+        <label>Department</label>
+        <select name="department" required>
+            <option value="">Select Department</option>
+            <option>Cardiology</option>
+            <option>Neurology</option>
+            <option>Orthopedics</option>
+            <option>Dermatology</option>
+            <option>General Medicine</option>
+        </select>
+
+        <label>Select Doctor</label>
+        <select name="doctor" required>
+            <option value="">Select Doctor</option>
+            <option>Dr. Rahul Sharma</option>
+            <option>Dr. Priya Patil</option>
+            <option>Dr. Amit Deshmukh</option>
+        </select>
+
+        <label>Appointment Date</label>
+        <input type="date" name="appointment_date" required>
+
+        <label>Appointment Time</label>
+        <input type="time" name="appointment_time" required>
+
+        <label>Symptoms</label>
+        <textarea name="symptoms"
+                  placeholder="Enter your symptoms"
+                  required></textarea>
+
+        <label>Medical History</label>
+        <textarea name="medical_history"
+                  placeholder="Enter previous medical history"></textarea>
+
+        <button type="submit">Book Appointment</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

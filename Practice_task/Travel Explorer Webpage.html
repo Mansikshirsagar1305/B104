@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Explorer</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eef7ff;
+}
+
+header {
+    background: #0077b6;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+.destinations {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 25px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px #ccc;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.content {
+    padding: 15px;
+}
+
+.content p {
+    line-height: 1.5;
+}
+
+a {
+    color: #0077b6;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Travel Explorer</h1>
+    <p>Explore Beautiful Places Around the World</p>
+</header>
+
+<div class="destinations">
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=800&q=80"
+             alt="Taj Mahal">
+        <div class="content">
+            <h2>Agra, India</h2>
+            <p>Visit the beautiful Taj Mahal, a symbol of love.</p>
+            <p>Attractions: Taj Mahal, Agra Fort</p>
+            <a href="https://www.tajmahal.gov.in/" target="_blank">Explore More</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=800&q=80"
+             alt="Goa Beach">
+        <div class="content">
+            <h2>Goa, India</h2>
+            <p>Enjoy beaches, sunsets and water activities.</p>
+            <p>Attractions: Baga Beach, Fort Aguada</p>
+            <a href="https://www.goa-tourism.com/" target="_blank">Explore More</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=800&q=80"
+             alt="Manali">
+        <div class="content">
+            <h2>Manali, India</h2>
+            <p>Experience mountains and beautiful nature.</p>
+            <p>Attractions: Solang Valley, Rohtang Pass</p>
+            <a href="https://himachaltourism.gov.in/" target="_blank">Explore More</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80"
+             alt="Paris">
+        <div class="content">
+            <h2>Paris, France</h2>
+            <p>Explore romantic streets and iconic landmarks.</p>
+            <p>Attractions: Eiffel Tower, Louvre Museum</p>
+            <a href="https://parisjetaime.com/eng/" target="_blank">Explore More</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80"
+             alt="Dubai">
+        <div class="content">
+            <h2>Dubai, UAE</h2>
+            <p>Discover modern architecture and shopping.</p>
+            <p>Attractions: Burj Khalifa, Dubai Mall</p>
+            <a href="https://www.visitdubai.com/" target="_blank">Explore More</a>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

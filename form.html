@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action=""method="POST">
+<label for="nameInput">Enter your Name</label>
+    <input type="text" id="nameInput" name="name" placeholder="Enter your Name">
+    <br>
+    <label for="ageInput">Enter Age</label>
+   <input type="number" id="ageInput" name=" Age" value="100" placeholder="Enter your age">
+   <br>
+   <label for="dateInput">Enter the DOB</label>
+   <input type="date" id="dateInput" placeholder="DOB">
+   <br>
+   <label for="appointmentInput">Appoinment</label>
+   <input type="datetime-local" id="appointmentInput">
+   <br>
+   <label for="fileInpu">UploadFile</label>
+   <input type="file" id="fileInput">
+   <br>
+   <label for="emailInput">Email</label>
+   <input type="email" name="email" id="emailInput" required>
+   <br>
+   <label for="passwordInput">password</label>
+   <input type="password" id="passwordInput">
+<br>
+<label for="contactNO">Contact Number</label>
+<input type="tel" name="" id="contactNO" pattern="\+91-[6-9][0-9]{9}/">
+<br>
+<input type="hidden" >
+<br>
+<!-- Radio buttons -->
+      
+        <legend>Choose your gender:</legend>
+        <label>
+          <input type="radio" name="gender" value="male">
+          Male
+        </label>
+        <label>
+          <input type="radio" name="gender" value="female">
+          Female
+        </label>
+        <label>
+          <input type="radio" name="gender" value="other">
+          Other
+        </label>
+     <br>
+
+
+
+     <legend>Select your vehicles:</legend>
+        
+        <label>
+          <input type="checkbox" name="vehicle1" value="car">
+          Car
+        </label>
+        
+        <label>
+          <input type="checkbox" name="vehicle2" value="bike">
+          Bike
+        </label>
+        
+        <label>
+          <input type="checkbox" name="vehicle3" value="truck">
+          Truck
+        </label>
+        
+        <label>
+          <input type="checkbox" name="vehicle4" value="bus">
+          Bus
+        </label>
+
+        <br>
+<label for="department">Select Department:</label>
+         <select id="department" name="department">
+        <option value="">--Please choose an option--</option>
+        <option value="hr">Human Resources</option>
+        <option value="finance">Finance</option>
+        <option value="it">Information Technology</option>
+        <option value="sales">Sales</option>
+        <option value="marketing">Marketing</option>
+      </select>
+      <br>
+      <br>
+   <button>Register</button>
+   <input type="submit" >
+     <input type="button" value="Login">
+       <input type="reset" value="Reset">
+</form>
+</body>
+</html>

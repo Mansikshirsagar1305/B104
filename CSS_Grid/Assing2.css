@@ -1,0 +1,173 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.container {
+    display: grid;
+
+    /* Named grid areas */
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+
+    /* fr units */
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto 1fr auto;
+
+    gap: 15px;
+    max-width: 1200px;
+    min-height: 95vh;
+    margin: auto;
+}
+
+.header {
+    grid-area: header;
+    background-color: #222;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+.header p {
+    margin-top: 8px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: white;
+    padding: 20px;
+}
+
+.sidebar h3 {
+    margin-bottom: 15px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    padding: 12px 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.main-content {
+    grid-area: main;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(150px, 1fr));
+
+    gap: 12px;
+}
+
+.card {
+    position: relative;
+    padding: 20px;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 150px;
+    overflow: hidden;
+}
+
+/* Dark overlay for readable text */
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        transparent,
+        rgba(0, 0, 0, 0.7)
+    );
+}
+
+.card h3,
+.card a {
+    position: relative;
+    z-index: 1;
+}
+
+.card a {
+    color: white;
+    text-decoration: none;
+    text-align: right;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.card1 {
+    background-image: url(
+        "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800"
+    );
+}
+
+.card2 {
+    background-image: url(
+        "https://images.unsplash.com/photo-1519608487953-e999c86e7455?w=800"
+    );
+}
+
+.card3 {
+    background-image: url(
+        "https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=800"
+    );
+}
+
+.card4 {
+    background-image: url(
+        "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=800"
+    );
+}
+
+.card5 {
+    background-image: url(
+        "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=800"
+    );
+}
+
+.card6 {
+    background-image: url(
+        "https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=800"
+    );
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive layout */
+@media (max-width: 650px) {
+    .container {
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "main"
+            "footer";
+
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr auto;
+    }
+
+    .main-content {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 180px);
+    }
+}

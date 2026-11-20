@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instagram Footer</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main { flex: 1; }
+
+    /* ---------- Footer ---------- */
+    .footer {
+      background: #0c1014;
+      border-top: 1px solid #2a2f34;
+      padding: 16px 16px 14px;
+      text-align: center;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px 16px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .footer-links a {
+      color: #a8a8a8;
+      text-decoration: none;
+      font-size: 12px;
+    }
+    .footer-links a:hover { text-decoration: underline; }
+
+    .footer-bottom {
+      margin-top: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      font-size: 12px;
+      color: #a8a8a8;
+    }
+
+    .lang {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      cursor: pointer;
+    }
+    .lang::after {
+      content: "";
+      width: 5px;
+      height: 5px;
+      border-right: 1px solid #a8a8a8;
+      border-bottom: 1px solid #a8a8a8;
+      transform: rotate(45deg) translateY(-2px);
+      margin-left: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <main></main>
+
+  <footer class="footer">
+    <ul class="footer-links">
+      <li><a href="#">Meta</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Jobs</a></li>
+      <li><a href="#">Help</a></li>
+      <li><a href="#">API</a></li>
+      <li><a href="#">Privacy</a></li>
+      <li><a href="#">Terms</a></li>
+      <li><a href="#">Locations</a></li>
+      <li><a href="#">Popular</a></li>
+      <li><a href="#">Instagram Lite</a></li>
+      <li><a href="#">Meta AI</a></li>
+      <li><a href="#">Muse</a></li>
+      <li><a href="#">Threads</a></li>
+      <li><a href="#">Contact Uploading &amp; Non-Users</a></li>
+      <li><a href="#">Meta Verified</a></li>
+    </ul>
+
+    <div class="footer-bottom">
+      <span class="lang">English</span>
+      <span>© 2026 Instagram from Meta</span>
+    </div>
+  </footer>
+
+</body>
+</html>

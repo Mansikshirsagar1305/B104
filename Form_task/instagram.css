@@ -1,0 +1,193 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0c1114;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
+
+.login-container {
+    display: flex;
+    width: 900px;
+    max-width: 100%;
+    min-height: 500px;
+    background-color: #142027;
+    border: 1px solid #303c43;
+}
+
+.promo-section {
+    width: 50%;
+    padding: 30px;
+    text-align: center;
+    background-color: #0c1114;
+    border-right: 1px solid #344149;
+}
+
+.instagram-logo {
+    text-align: left;
+    font-size: 48px;
+    font-weight: bold;
+    color: #e1306c;
+    margin-bottom: 35px;
+}
+
+.promo-section h2 {
+    font-size: 23px;
+    line-height: 1.7;
+    font-weight: 400;
+    margin-bottom: 35px;
+}
+
+.promo-section h2 span {
+    background: linear-gradient(90deg, #ff3040, #d62976, #7638fa);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.photo-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 130px;
+}
+
+.photo {
+    width: 90px;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    border-radius: 12px;
+    border: 3px solid white;
+    margin-left: -15px;
+}
+
+.photo-one {
+    background: linear-gradient(135deg, #e6a46d, #a04c38);
+    transform: rotate(-12deg);
+}
+
+.photo-two {
+    background: linear-gradient(135deg, #f8d57e, #c85a71);
+    z-index: 1;
+}
+
+.photo-three {
+    background: linear-gradient(135deg, #7ed6df, #8e44ad);
+    transform: rotate(12deg);
+}
+
+.form-section {
+    width: 50%;
+    padding: 60px 35px 35px;
+}
+
+.form-section h3 {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+form input {
+    display: block;
+    width: 100%;
+    padding: 13px 10px;
+    margin-bottom: 10px;
+    background-color: #17242b;
+    border: 1px solid #394850;
+    border-radius: 9px;
+    color: white;
+    font-size: 12px;
+}
+
+form input::placeholder {
+    color: #a2adb4;
+}
+
+form input:focus {
+    outline: 1px solid #4c9aff;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 13px;
+    margin-top: 5px;
+    background-color: #2459a6;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background-color: #3478d5;
+}
+
+.forgot-link {
+    display: block;
+    margin: 22px 0 40px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.facebook-btn,
+.create-btn {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #354752;
+    border-radius: 25px;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 12px;
+}
+
+.facebook-btn span {
+    color: #3696ff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.create-btn {
+    color: #439bff;
+    border-color: #2768b3;
+}
+
+.facebook-btn:hover,
+.create-btn:hover {
+    background-color: #202f38;
+}
+
+@media (max-width: 650px) {
+    .login-container {
+        flex-direction: column;
+    }
+
+    .promo-section,
+    .form-section {
+        width: 100%;
+    }
+
+    .promo-section {
+        border-right: none;
+        border-bottom: 1px solid #344149;
+    }
+
+    .form-section {
+        padding: 30px 20px;
+    }
+}
