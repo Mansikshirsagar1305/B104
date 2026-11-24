@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BookMyShow Navbar</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: "Roboto", Arial, sans-serif;
+      background: #fff;
+      color: #333;
+    }
+
+    /* ---------- Top bar ---------- */
+    .top-bar {
+      background: #fff;
+    }
+    .top-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      height: 64px;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .top-left { display: flex; align-items: center; gap: 16px; flex: 1; }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      color: #333;
+      text-decoration: none;
+      letter-spacing: -1px;
+      display: flex;
+      align-items: center;
+    }
+    .logo span {
+      background: #f84464;
+      color: #fff;
+      padding: 0 4px;
+      margin: 0 1px;
+      border-radius: 3px;
+      transform: rotate(-4deg);
+      display: inline-block;
+    }
+
+    .search {
+      position: relative;
+      width: 100%;
+      max-width: 390px;
+    }
+    .search svg {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 14px;
+      height: 14px;
+    }
+    .search input {
+      width: 100%;
+      height: 36px;
+      padding: 0 12px 0 36px;
+      border: 1px solid #e5e5e5;
+      border-radius: 3px;
+      font-size: 12px;
+      outline: none;
+      color: #333;
+    }
+    .search input::placeholder { color: #aaa; }
+    .search input:focus { border-color: #f84464; }
+
+    .top-right { display: flex; align-items: center; gap: 24px; }
+
+    .city {
+      font-size: 12px;
+      color: #333;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .city::after {
+      content: "";
+      width: 5px;
+      height: 5px;
+      border-right: 1px solid #888;
+      border-bottom: 1px solid #888;
+      transform: rotate(45deg) translateY(-2px);
+    }
+
+    .sign-in {
+      background: #f84464;
+      color: #fff;
+      border: none;
+      padding: 5px 14px;
+      font-size: 11px;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    .sign-in:hover { background: #e03a58; }
+
+    .menu {
+      width: 18px;
+      height: 14px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+    .menu span { height: 2px; background: #444; border-radius: 1px; }
+
+    /* ---------- Sub bar ---------- */
+    .sub-bar {
+      background: #f2f2f2;
+      border-bottom: 3px solid #e8e8e8;
+    }
+    .sub-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      height: 40px;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .sub-inner ul { list-style: none; display: flex; }
+    .sub-left li { margin-right: 18px; }
+    .sub-right li { margin-left: 18px; }
+
+    .sub-inner a {
+      text-decoration: none;
+      color: #333;
+      font-size: 12px;
+      transition: color 0.2s;
+    }
+    .sub-right a { font-size: 10px; color: #555; }
+    .sub-inner a:hover { color: #f84464; }
+
+    @media (max-width: 760px) {
+      .sub-right, .city { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <!-- Top bar -->
+    <div class="top-bar">
+      <div class="top-inner">
+        <div class="top-left">
+          <a href="#" class="logo">book<span>my</span>show</a>
+
+          <div class="search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2.4" stroke-linecap="round">
+              <circle cx="10" cy="10" r="7"></circle>
+              <line x1="15.5" y1="15.5" x2="21" y2="21"></line>
+            </svg>
+            <input type="text" placeholder="Search for Movies, Events, Plays, Sports and Activities" />
+          </div>
+        </div>
+
+        <div class="top-right">
+          <div class="city">Pune</div>
+          <button class="sign-in">Sign in</button>
+          <div class="menu"><span></span><span></span><span></span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sub bar -->
+    <div class="sub-bar">
+      <div class="sub-inner">
+        <ul class="sub-left">
+          <li><a href="#">Movies</a></li>
+          <li><a href="#">Stream</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Plays</a></li>
+          <li><a href="#">Sports</a></li>
+          <li><a href="#">Activities</a></li>
+        </ul>
+        <ul class="sub-right">
+          <li><a href="#">ListYourShow</a></li>
+          <li><a href="#">Corporates</a></li>
+          <li><a href="#">Offers</a></li>
+          <li><a href="#">Gift Cards</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+</body>
+</html>

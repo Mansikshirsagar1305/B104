@@ -1,0 +1,546 @@
+
+/* =========================
+   GOOGLE FONTS
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+
+/* =========================
+   GLOBAL CSS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: #25251f;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.container {
+    width: 92%;
+    max-width: 1160px;
+    margin: auto;
+}
+
+
+/* =========================
+   TOP BAR
+========================= */
+
+.topbar {
+    background-color: #173a28;
+    color: white;
+    text-align: center;
+    padding: 9px 12px;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================
+   HEADER AND NAVBAR
+========================= */
+
+header {
+    background-color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.nav {
+    min-height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+/* Logo */
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #244d35;
+    line-height: 1;
+}
+
+.logo span {
+    display: block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-align: center;
+    margin-top: 6px;
+}
+
+/* Navigation links */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav a {
+    color: #333333;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: #b97822;
+}
+
+/* Navbar button */
+
+.nav-cta {
+    display: inline-block;
+    background-color: #244d35;
+    color: white;
+    padding: 12px 23px;
+    border-radius: 3px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.nav-cta:hover {
+    background-color: #e9a23b;
+    color: #222222;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    min-height: 580px;
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(20, 45, 32, 0.90),
+            rgba(20, 45, 32, 0.45),
+            rgba(20, 45, 32, 0.05)
+        ),
+        url('https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=1800&q=85');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+}
+
+.hero .container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+/* Hero small heading */
+
+.eyebrow {
+    color: #a66a20;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    margin-bottom: 15px;
+}
+
+.hero .eyebrow {
+    color: #f3c477;
+}
+
+/* Hero main heading */
+
+.hero h1 {
+    max-width: 680px;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1.15;
+    font-weight: 700;
+}
+
+/* Hero paragraph */
+
+.hero p {
+    max-width: 510px;
+    margin: 22px 0 30px;
+    font-size: 17px;
+    color: #ffffff;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+    display: inline-block;
+    background-color: #244d35;
+    color: white;
+    padding: 14px 25px;
+    border-radius: 3px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #e9a23b;
+    color: #222222;
+}
+
+.btn.light {
+    background-color: #ffffff;
+    color: #244d35;
+    margin-left: 10px;
+}
+
+.btn.light:hover {
+    background-color: #e9a23b;
+    color: #222222;
+}
+
+
+/* =========================
+   COMMON SECTIONS
+========================= */
+
+.section {
+    padding: 85px 0;
+}
+
+.center {
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(30px, 4vw, 45px);
+    color: #244d35;
+    line-height: 1.2;
+}
+
+.lead {
+    max-width: 650px;
+    margin: 18px auto 35px;
+    color: #706f67;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   FAVOURITE FLAVOURS
+========================= */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 35px;
+}
+
+/* Product card */
+
+.card {
+    background-color: white;
+    border: 1px solid #eee9df;
+    overflow: hidden;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+}
+
+/* Product image */
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.card:hover img {
+    transform: scale(1.04);
+}
+
+/* Product details */
+
+.card-body {
+    padding: 23px;
+}
+
+.card-body h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    color: #244d35;
+    margin-bottom: 10px;
+}
+
+.card-body p {
+    font-size: 14px;
+    color: #706f67;
+    margin-bottom: 16px;
+}
+
+.price {
+    color: #244d35;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.price:hover {
+    color: #b97822;
+}
+
+
+/* =========================
+   OUR PHILOSOPHY SECTION
+========================= */
+
+.soft {
+    background-color: #fff9ef;
+}
+
+.split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.split img {
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.split h2 {
+    max-width: 550px;
+}
+
+.split .lead {
+    margin: 18px 0 28px;
+}
+
+
+/* =========================
+   BOTTOM BANNER
+========================= */
+
+.banner {
+    padding: 75px 20px;
+    background-color: #244d35;
+    text-align: center;
+    color: white;
+}
+
+.banner .eyebrow {
+    color: #f3c477;
+}
+
+.banner h2 {
+    color: white;
+    font-size: 42px;
+}
+
+.banner p {
+    max-width: 650px;
+    margin: 18px auto 28px;
+    color: #e7eee8;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: #172f22;
+    color: white;
+    padding: 55px 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+}
+
+footer h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: #f6d69e;
+    margin-bottom: 18px;
+}
+
+footer p {
+    color: #d7dfd8;
+    font-size: 14px;
+    max-width: 350px;
+    line-height: 1.8;
+}
+
+footer a {
+    display: block;
+    color: #d7dfd8;
+    font-size: 14px;
+    margin: 9px 0;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: #f3c477;
+    padding-left: 5px;
+}
+
+/* Copyright */
+
+.copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    margin-top: 40px;
+    padding-top: 20px;
+    text-align: center;
+    color: #b9c7bc;
+    font-size: 12px;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 800px) {
+
+    .nav {
+        min-height: auto;
+        padding: 18px 0;
+        flex-wrap: wrap;
+    }
+
+    nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    .nav-cta {
+        display: none;
+    }
+
+    .hero {
+        min-height: 480px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .split {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .split img {
+        height: 350px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 520px) {
+
+    .logo {
+        font-size: 24px;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 440px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .btn.light {
+        margin: 12px 0 0;
+    }
+
+    .section {
+        padding: 55px 0;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .split img {
+        height: 280px;
+    }
+
+    .banner h2 {
+        font-size: 32px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}

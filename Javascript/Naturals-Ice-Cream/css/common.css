@@ -1,0 +1,439 @@
+
+/* Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+/* Common colours */
+
+:root {
+    --green: #244d35;
+    --deep: #173a28;
+    --cream: #fff9ef;
+    --orange: #e9a23b;
+    --ink: #25251f;
+    --muted: #706f67;
+}
+
+/* Reset */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    background: #fff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Container */
+
+.container {
+    width: min(1160px, 92%);
+    margin: auto;
+}
+
+/* Top bar */
+
+.topbar {
+    background: var(--deep);
+    color: #fff;
+    text-align: center;
+    padding: 8px 12px;
+    font-size: 12px;
+    letter-spacing: .4px;
+}
+
+/* Header and navigation */
+
+header {
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 12px #0000000b;
+}
+
+.nav {
+    min-height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 27px;
+    font-weight: 700;
+    color: var(--green);
+    line-height: 1;
+}
+
+.logo span {
+    display: block;
+    font: 600 9px 'DM Sans', sans-serif;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+nav a:hover,
+nav a.active {
+    color: #b97822;
+}
+
+/* Buttons */
+
+.nav-cta,
+.btn {
+    display: inline-block;
+    background: var(--green);
+    color: white;
+    padding: 12px 22px;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: 13px;
+    transition: .2s;
+}
+
+.nav-cta:hover,
+.btn:hover {
+    background: var(--orange);
+    color: #202018;
+}
+
+.btn.light {
+    background: #fff;
+    color: var(--green);
+    margin-left: 10px;
+}
+
+/* Sections */
+
+.section {
+    padding: 76px 0;
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    color: #a66a20;
+    letter-spacing: 2.5px;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+/* Headings */
+
+h1,
+h2,
+h3 {
+    font-family: 'Playfair Display', serif;
+    line-height: 1.15;
+}
+
+h1 {
+    font-size: clamp(40px, 6vw, 70px);
+}
+
+h2 {
+    font-size: clamp(30px, 4vw, 44px);
+    color: var(--green);
+}
+
+h3 {
+    font-size: 22px;
+}
+
+.lead {
+    color: var(--muted);
+    max-width: 620px;
+    margin: 16px 0 26px;
+}
+
+/* Center content */
+
+.center {
+    text-align: center;
+}
+
+.center .lead {
+    margin: 16px auto 30px;
+}
+
+/* Home hero */
+
+.hero {
+    min-height: 550px;
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            #142d20df 0%,
+            #142d2080 48%,
+            #142d2005 100%
+        ),
+        url('https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=1800&q=85')
+        center/cover;
+
+    color: white;
+}
+
+.hero h1 {
+    max-width: 650px;
+}
+
+.hero p {
+    max-width: 490px;
+    margin: 20px 0 28px;
+    color: #fff;
+    font-size: 17px;
+}
+
+.hero .eyebrow {
+    color: #f3c477;
+}
+
+/* Product grid */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #eee9df;
+    overflow: hidden;
+}
+
+.card img {
+    height: 230px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card p {
+    color: var(--muted);
+    font-size: 14px;
+    margin: 8px 0 13px;
+}
+
+.price {
+    font-weight: 700;
+    color: var(--green);
+}
+
+/* Split layout */
+
+.split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.split img {
+    height: 440px;
+    border-radius: 4px;
+}
+
+/* Background and badges */
+
+.soft {
+    background: var(--cream);
+}
+
+.pill {
+    display: inline-block;
+    background: #f7ead6;
+    color: #8a591c;
+    padding: 7px 13px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Bottom banner */
+
+.banner {
+    padding: 65px 20px;
+    background: var(--green);
+    color: #fff;
+    text-align: center;
+}
+
+.banner h2 {
+    color: #fff;
+}
+
+.banner p {
+    max-width: 650px;
+    margin: 14px auto 22px;
+    color: #e7eee8;
+}
+
+/* Footer */
+
+footer {
+    background: #172f22;
+    color: #fff;
+    padding: 48px 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 35px;
+}
+
+footer h3 {
+    font-size: 19px;
+    margin-bottom: 14px;
+    color: #f6d69e;
+}
+
+footer p,
+footer a {
+    font-size: 13px;
+    color: #d7dfd8;
+}
+
+footer a {
+    display: block;
+    margin: 7px 0;
+}
+
+.copyright {
+    border-top: 1px solid #ffffff25;
+    margin-top: 35px;
+    padding-top: 17px;
+    text-align: center;
+    color: #b9c7bc;
+    font-size: 12px;
+}
+
+/* Form controls */
+
+.form-control {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #ddd8ce;
+    background: #fff;
+    font: inherit;
+    margin: 6px 0 14px;
+    border-radius: 2px;
+}
+
+label {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* Responsive design */
+
+@media (max-width: 800px) {
+
+    .nav {
+        padding: 16px 0;
+        flex-wrap: wrap;
+    }
+
+    .nav nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .nav-cta {
+        display: none;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .split {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .split img {
+        height: 320px;
+    }
+
+    .hero {
+        min-height: 480px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 520px) {
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav nav {
+        font-size: 12px;
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .hero {
+        min-height: 430px;
+    }
+
+    .section {
+        padding: 52px 0;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .btn.light {
+        margin: 10px 0 0;
+    }
+}
